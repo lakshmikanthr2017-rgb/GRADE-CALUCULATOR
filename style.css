@@ -1,0 +1,234 @@
+:root {
+    --primary: #0d3b66;
+    --secondary: #114b7a;
+    --accent: #f4d35e;
+    --bg: #f4f7f6;
+    --card-bg: #ffffff;
+    --border: #e0e0e0;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: var(--bg);
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.header {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    border-bottom: 4px solid var(--accent);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 1.6rem;
+}
+
+.header p {
+    margin: 5px 0 0 0;
+    font-size: 0.9rem;
+    color: var(--accent);
+}
+
+.main-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+/* Tab Navigation */
+.tab-navigation {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    background: #dcdcdc;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #444;
+    cursor: pointer;
+    border-radius: 6px 6px 0 0;
+    transition: background 0.3s;
+}
+
+.tab-btn.active {
+    background: var(--primary);
+    color: white;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Card Styling */
+.calculator-card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    padding: 20px;
+    border: 1px solid var(--border);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.card-header h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: var(--primary);
+}
+
+.weightage-badge {
+    background: #eef4f8;
+    color: var(--primary);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    border: 1px solid var(--primary);
+}
+
+.calculator-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .calculator-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.calc-section {
+    background: #fdfdfd;
+    border: 1px solid #e2e8f0;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+.calc-section h3 {
+    margin-top: 0;
+    font-size: 1rem;
+    color: var(--secondary);
+    border-bottom: 1px solid #eee;
+    padding-bottom: 6px;
+}
+
+.input-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.input-group {
+    flex: 1;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.input-group input {
+    width: 90%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    font-weight: bold;
+}
+
+/* Result Box */
+.result-box {
+    background: #f0f4f8;
+    padding: 12px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.res-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.grade-badge {
+    padding: 3px 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    color: white;
+}
+
+.grade-ap { background-color: #2b9348; }  /* A+ Green */
+.grade-a  { background-color: #38b000; }  /* A Light Green */
+.grade-bp { background-color: #0077b6; }  /* B+ Blue */
+.grade-b  { background-color: #f77f00; }  /* B Orange */
+.grade-c  { background-color: #d62828; }  /* C Red */
+
+/* Reference Scale */
+.reference-card {
+    background: white;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
+
+.reference-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 1rem;
+}
+
+.scale-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.scale-item {
+    flex: 1;
+    min-width: 120px;
+    padding: 8px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 0.85rem;
+    background: #f0f0f0;
+}
+
+.footer {
+    text-align: center;
+    padding: 15px;
+    background: var(--primary);
+    color: white;
+    margin-top: 30px;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
